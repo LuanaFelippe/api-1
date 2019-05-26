@@ -19,4 +19,20 @@ class ListUserHandlerTest extends TestCase
         // Assert 
         self::assertCount(5, $data);
     }
+    
+    public function test_list_users_ativo()
+    {
+        // Arrange
+        $users =  create('users', [], 5);
+
+        // Act
+        $name = "Luana";
+		$handler = new ListUserHandler(dic('db'));
+		
+        $data = $handler($name);
+
+        // Assert 
+        self::assertCount(5, $data);
+    }
+
 }
