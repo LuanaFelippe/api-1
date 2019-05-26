@@ -16,8 +16,7 @@ class ListUserHandler
 
     public function __invoke(Name $name)
     {
-		if(isset($_GET['name'])){
-			$name = $_GET['name'];
+		if(isset($name){
 			$query = "SELECT name, user, status FROM users WHERE name LIKE '%" .$name. "%' AND status = 1";
 		} else {
 			$query = "SELECT name, user, status FROM users WHERE status = 1";
