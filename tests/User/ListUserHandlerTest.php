@@ -19,8 +19,8 @@ class ListUserHandlerTest extends TestCase
         // Assert 
         self::assertCount(5, $data);
     }
-    
-    public function test_list_users_ativo()
+	
+	 public function test_list_users_ativo()
     {
         // Arrange
         $users =  create('users', [], 5);
@@ -34,5 +34,4 @@ class ListUserHandlerTest extends TestCase
         // Assert 
         self::assertCount(5, $data);
     }
-
 }
